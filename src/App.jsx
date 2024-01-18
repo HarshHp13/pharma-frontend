@@ -1,15 +1,18 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
+import LoginForm from '../components/LoginForm'
 
-function App() {
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+function Login () {
   return (
-    <>
-      <Navbar username="John Doe" />
-      <Dashboard />
-    </>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Dashboard} />
+        <Route path="/login" component={LoginForm}/>
+      </Switch>
+    </Router>
   )
 }
-
 export default App
