@@ -1,0 +1,29 @@
+.form-wrapper{
+  max-width: 400px;
+  margin: auto;
+  margin-top:100px;
+  padding:10px;
+  border: 1px solid #eae4e4;
+  border-radius: 10px;
+  background-color: #0a0a0a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-field{
+  width: 100%;
+
+  font-size: large;
+}
+.form-field-input{
+  
+  padding: 10px;
+  margin: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px
+}
