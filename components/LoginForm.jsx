@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios'
 import Cookies from 'js-cookie';
 import './LoginForm.css';
-import { useHistory } from 'react-router-dom';
+
+import {useNavigate } from 'react-router-dom';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   
-  const history = useHistory();
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -16,7 +16,7 @@ const LoginForm = () => {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     
@@ -36,8 +36,8 @@ const LoginForm = () => {
       Cookies.set('refresh_token', refreshToken);
       //Send access token in Authorization header in each request
       
-      history.push('/')
-
+      navigate('/');
+      
     } catch (axiosError) {
       
       const error = axiosError.response.data.error;

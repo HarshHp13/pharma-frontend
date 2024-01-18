@@ -3,16 +3,10 @@ import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
 import LoginForm from '../components/LoginForm'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-function Login () {
+function App () {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Dashboard} />
-        <Route path="/login" component={LoginForm}/>
-      </Switch>
-    </Router>
+    <div></div>
   )
 }
 export default App
