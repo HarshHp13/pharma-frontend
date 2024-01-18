@@ -14,13 +14,20 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    background-color: wheat;
 }
+
+.task__cardBodyDescription{
+    width: 50vw;
+    overflow: hidden;
+}
+
 .task__cardBodyStatusSelect{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 12.5px;
     display: flex;
+    margin-right:10px;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
