@@ -1,0 +1,73 @@
+body {
+  background-image: url("/assets/images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+  padding: 2rem;
+}
+
+.navbar-brand, .nav-link, .navbar-brand:hover, .nav-link:hover, .navbar-brand:focus, .nav-link:focus, .navbar-brand:active, .nav-link:active {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar-brand img {
+  width: 2.5rem;
+}
+
+.nav-link {
+  padding-top: 1rem;
+}
+
+.bg-body-tertiary {
+  background-color: transparent !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: auto;
+}
+
+.table {
+  text-align: center;
+  width: 70vw;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+
+  --bs-table-bg: transparent;
+  --bs-table-color: white;
+}
+
+.dynamic {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dynamic:hover {
+  background-color: white !important;
+  color: black;
+}
+
+thead {
+  border-color: white;
+}
+
+tbody {
+  border-color: rgba(128, 128, 128, 0.728);
+}
+
+tr td:nth-child(4) div {
+  border-radius: 2rem;
+  padding: 0.2rem 0.5rem;
+  display: inline;
+}

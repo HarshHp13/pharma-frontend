@@ -2,3 +2,12 @@
   margin: 0 auto;
   text-align: center;
 }
+
+body {
+  background-image: url("/assets/images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}

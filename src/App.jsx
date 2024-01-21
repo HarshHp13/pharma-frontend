@@ -1,17 +1,39 @@
+import { useEffect, useState } from 'react'
 import './App.css'
+import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
-import LoginForm from '../components/LoginForm'
+import Login from './pages/Login'
+import Cookies from 'js-cookie'
+import {useNavigate} from 'react-router-dom'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+function App() {
+  const navigate=useNavigate()
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  useEffect(()=>{
+    if(Cookies.get('access_token')){
+      setIsLoggedIn(true)
+    }
+    else{
+      navigate('/login')
+    }
+  },[isLoggedIn, navigate])
 
-function Login () {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Dashboard} />
-        <Route path="/login" component={LoginForm}/>
-      </Switch>
-    </Router>
+    <>
+    {
+      isLoggedIn?
+      <>
+        <Navbar/>
+        <Dashboard/>
+      </>
+      :
+      <>
+        Redirecting to login...
+      </>
+    }
+    
+    </>
   )
 }
+
 export default App

@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    background-color: black;
 }
 
 .navbar__container{
@@ -24,3 +25,23 @@
 .navbar__containerUsername{
     margin-right: 40px;
 }
+
+.navbar {
+    padding: 2rem;
+  }
+  
+  .navbar-brand, .nav-link, .navbar-brand:hover, .nav-link:hover, .navbar-brand:focus, .nav-link:focus, .navbar-brand:active, .nav-link:active {
+    color: white !important;
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+  }
+  
+  .navbar-brand img {
+    width: 2.5rem;
+  }
+  
+  .nav-link {
+    padding-top: 1rem;
+  }
